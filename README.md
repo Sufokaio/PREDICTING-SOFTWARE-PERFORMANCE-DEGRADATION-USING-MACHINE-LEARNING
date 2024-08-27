@@ -65,6 +65,7 @@ Please download them and unzip them in the corresponding paths.
 ## Steps to Reproduce
 
 ### Results of Comparing Combination Methods on "Within" Split
+Navigate to `cpgnn/`.
 
 #### For Table 4.2: 
 - **Euclidean Distance:**
