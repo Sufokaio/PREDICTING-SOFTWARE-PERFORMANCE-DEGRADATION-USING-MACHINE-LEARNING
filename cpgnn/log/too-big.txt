@@ -1,0 +1,3 @@
+2024-08-25 07:49:42,285 |   INFO | Use GPU 0 and GPU 1 for training
+2024-08-25 07:49:42,285 |   INFO | Loading data from too_big_c4b_perf_encoding
+2024-08-25 07:50:00,596 |   INFO | Extracting statements

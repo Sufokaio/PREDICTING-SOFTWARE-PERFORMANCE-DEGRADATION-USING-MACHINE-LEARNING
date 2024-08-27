@@ -1,0 +1,104 @@
+2024-08-23 23:28:21,200 |   INFO | Use GPU 0 and GPU 1 for training
+2024-08-23 23:28:21,833 |   INFO | Loading data from c4b_perf_encoding_within
+2024-08-23 23:28:23,861 |   INFO | Extracting statements
+2024-08-23 23:28:28,535 |   INFO | Extracting interactions
+2024-08-23 23:28:58,008 |  DEBUG | CPG statistics
+2024-08-23 23:28:58,008 |  DEBUG | [n_typetoken, n_entity, n_stat, n_relation] = [12102, 1595047, 456392, 8]
+2024-08-23 23:28:58,008 |  DEBUG | [n_triple, n_inter] = [3847937, 4112124]
+2024-08-23 23:28:58,008 |  DEBUG | [n_ast, n_cfg, n_pdg] = [3262860, 530091, 319173]
+2024-08-23 23:28:58,008 |  DEBUG | [max n_entity for a statement] = [2014]
+2024-08-23 23:28:58,008 |   INFO | Parsing code perf degradation prediction dataset
+2024-08-23 23:28:58,008 |   INFO | Extract functions from c4b dataset
+2024-08-23 23:28:58,008 |  DEBUG | The total number of functions: 6982
+2024-08-23 23:28:59,116 |  DEBUG | Code Performance Degradation: [n_I, n_TN] = [30000, 30000]
+2024-08-23 23:28:59,116 |   INFO | Converting interactions into sparse adjacency matrix
+2024-08-23 23:28:59,560 |   INFO | Generating normalized sparse adjacency matrix
+2024-08-23 23:29:00,040 |   INFO | Generating code perf degradation prediction training, validation, and testing sets
+2024-08-23 23:29:00,040 |   INFO | Initing type/token embeddings with word2vec
+2024-08-23 23:29:11,449 |   INFO | code performance degradation prediction on type 0
+2024-08-23 23:29:11,465 |  DEBUG | Performance degradation (Type 0) [n_train, n_val, n_test] = [34200, 10800, 15000]
+2024-08-23 23:29:11,470 |   INFO | Initing SGL model
+2024-08-23 23:29:11,472 |   INFO | Finish building inputs for SGL
+2024-08-23 23:29:13,183 |   INFO | Init entity embeddings with pre-trained word2vec embeddings
+2024-08-23 23:29:13,207 |   INFO | Finish building weights for SGL
+2024-08-23 23:29:14,224 |   INFO | Finish building model for GNN
+2024-08-23 23:29:14,278 |   INFO | I am HERE
+2024-08-23 23:29:14,279 |   INFO | PLEASE:
+2024-08-23 23:29:14,279 |   INFO | Tensor("add_4:0", shape=(?, 1), dtype=float32, device=/device:CPU:0)
+2024-08-23 23:29:14,279 |   INFO | NOW HERE
+2024-08-23 23:29:14,533 |   INFO | Finish building loss for code performance degradation prediction
+2024-08-23 23:29:14,533 |  DEBUG | Variable name: entity_embedding Shape: 51041536
+2024-08-23 23:29:14,533 |  DEBUG | Variable name: w_gnn_0 Shape: 2048
+2024-08-23 23:29:14,533 |  DEBUG | Variable name: b_gnn_0 Shape: 32
+2024-08-23 23:29:14,533 |  DEBUG | Variable name: w_gnn_1 Shape: 2048
+2024-08-23 23:29:14,533 |  DEBUG | Variable name: b_gnn_1 Shape: 32
+2024-08-23 23:29:14,533 |  DEBUG | Variable name: w_gnn_2 Shape: 2048
+2024-08-23 23:29:14,533 |  DEBUG | Variable name: b_gnn_2 Shape: 32
+2024-08-23 23:29:14,533 |  DEBUG | Variable name: w_gnn_3 Shape: 2048
+2024-08-23 23:29:14,533 |  DEBUG | Variable name: b_gnn_3 Shape: 32
+2024-08-23 23:29:14,533 |  DEBUG | Variable name: w_perf Shape: 160
+2024-08-23 23:29:14,533 |  DEBUG | Variable name: b_perf Shape: 1
+2024-08-23 23:29:14,533 |  DEBUG | oaktree_si_gnn has 51050017 parameters
+2024-08-23 23:29:14,533 |   INFO | Setup tensorflow session
+2024-08-23 23:29:22,202 |   INFO | Training 0 for 30 epochs
+2024-08-23 23:58:26,196 |  DEBUG | Epoch 1 [1744.0s]: train=[(performance degradation: 60.72867)]
+2024-08-24 00:01:24,865 |   INFO | perf Validation: [rec, pre, f1, auc]==[0.077593, 0.838000, 0.142034, 0.678147]
+2024-08-24 00:30:05,707 |  DEBUG | Epoch 2 [1720.8s]: train=[(performance degradation: 57.71783)]
+2024-08-24 00:33:01,478 |   INFO | perf Validation: [rec, pre, f1, auc]==[0.082963, 0.961373, 0.152745, 0.717258]
+2024-08-24 01:01:41,933 |  DEBUG | Epoch 3 [1720.5s]: train=[(performance degradation: 56.28036)]
+2024-08-24 01:04:37,348 |   INFO | perf Validation: [rec, pre, f1, auc]==[0.321852, 0.827225, 0.463405, 0.735575]
+2024-08-24 01:33:18,600 |  DEBUG | Epoch 4 [1721.3s]: train=[(performance degradation: 53.58074)]
+2024-08-24 01:36:14,511 |   INFO | perf Validation: [rec, pre, f1, auc]==[0.479815, 0.796006, 0.598729, 0.746169]
+2024-08-24 02:04:58,257 |  DEBUG | Epoch 5 [1723.7s]: train=[(performance degradation: 51.89217)]
+2024-08-24 02:07:54,488 |   INFO | perf Validation: [rec, pre, f1, auc]==[0.380370, 0.871447, 0.529586, 0.765911]
+2024-08-24 02:36:37,541 |  DEBUG | Epoch 6 [1723.1s]: train=[(performance degradation: 50.12017)]
+2024-08-24 02:39:33,613 |   INFO | perf Validation: [rec, pre, f1, auc]==[0.543148, 0.797011, 0.646035, 0.778351]
+2024-08-24 03:08:17,905 |  DEBUG | Epoch 7 [1724.3s]: train=[(performance degradation: 48.80635)]
+2024-08-24 03:11:14,205 |   INFO | perf Validation: [rec, pre, f1, auc]==[0.444444, 0.901239, 0.595312, 0.819260]
+2024-08-24 03:40:04,280 |  DEBUG | Epoch 8 [1730.1s]: train=[(performance degradation: 47.36114)]
+2024-08-24 03:43:03,467 |   INFO | perf Validation: [rec, pre, f1, auc]==[0.576296, 0.855650, 0.688724, 0.822914]
+2024-08-24 04:11:56,504 |  DEBUG | Epoch 9 [1733.0s]: train=[(performance degradation: 45.86279)]
+2024-08-24 04:14:56,060 |   INFO | perf Validation: [rec, pre, f1, auc]==[0.495185, 0.913251, 0.642171, 0.847151]
+2024-08-24 04:43:48,833 |  DEBUG | Epoch 10 [1732.8s]: train=[(performance degradation: 44.67385)]
+2024-08-24 04:46:48,150 |   INFO | perf Validation: [rec, pre, f1, auc]==[0.555185, 0.889878, 0.683772, 0.851386]
+2024-08-24 05:15:41,500 |  DEBUG | Epoch 11 [1733.3s]: train=[(performance degradation: 43.40057)]
+2024-08-24 05:18:40,853 |   INFO | perf Validation: [rec, pre, f1, auc]==[0.560000, 0.891247, 0.687820, 0.858837]
+2024-08-24 05:47:34,143 |  DEBUG | Epoch 12 [1733.3s]: train=[(performance degradation: 42.63637)]
+2024-08-24 05:50:33,623 |   INFO | perf Validation: [rec, pre, f1, auc]==[0.565185, 0.909416, 0.697122, 0.867042]
+2024-08-24 06:19:24,900 |  DEBUG | Epoch 13 [1731.3s]: train=[(performance degradation: 41.13874)]
+2024-08-24 06:22:24,157 |   INFO | perf Validation: [rec, pre, f1, auc]==[0.566852, 0.917841, 0.700859, 0.876197]
+2024-08-24 06:51:16,769 |  DEBUG | Epoch 14 [1732.6s]: train=[(performance degradation: 40.41468)]
+2024-08-24 06:54:15,966 |   INFO | perf Validation: [rec, pre, f1, auc]==[0.635370, 0.896759, 0.743768, 0.873941]
+2024-08-24 07:23:10,183 |  DEBUG | Epoch 15 [1734.2s]: train=[(performance degradation: 39.67072)]
+2024-08-24 07:26:11,351 |   INFO | perf Validation: [rec, pre, f1, auc]==[0.708889, 0.838554, 0.768289, 0.871756]
+2024-08-24 07:55:15,027 |  DEBUG | Epoch 16 [1743.7s]: train=[(performance degradation: 39.06687)]
+2024-08-24 07:58:16,808 |   INFO | perf Validation: [rec, pre, f1, auc]==[0.696111, 0.865930, 0.771789, 0.879545]
+2024-08-24 08:27:20,016 |  DEBUG | Epoch 17 [1743.2s]: train=[(performance degradation: 39.18093)]
+2024-08-24 08:30:21,557 |   INFO | perf Validation: [rec, pre, f1, auc]==[0.600926, 0.932739, 0.730938, 0.893870]
+2024-08-24 08:59:25,251 |  DEBUG | Epoch 18 [1743.7s]: train=[(performance degradation: 38.32662)]
+2024-08-24 09:02:27,311 |   INFO | perf Validation: [rec, pre, f1, auc]==[0.709630, 0.869131, 0.781323, 0.887340]
+2024-08-24 09:31:30,645 |  DEBUG | Epoch 19 [1743.3s]: train=[(performance degradation: 37.05089)]
+2024-08-24 09:34:31,950 |   INFO | perf Validation: [rec, pre, f1, auc]==[0.675926, 0.904809, 0.773797, 0.895403]
+2024-08-24 10:03:36,118 |  DEBUG | Epoch 20 [1744.2s]: train=[(performance degradation: 36.51885)]
+2024-08-24 10:06:38,291 |   INFO | perf Validation: [rec, pre, f1, auc]==[0.660556, 0.921467, 0.769496, 0.898771]
+2024-08-24 10:35:47,123 |  DEBUG | Epoch 21 [1748.8s]: train=[(performance degradation: 35.90912)]
+2024-08-24 10:38:49,381 |   INFO | perf Validation: [rec, pre, f1, auc]==[0.607593, 0.944444, 0.739464, 0.907759]
+2024-08-24 11:07:58,424 |  DEBUG | Epoch 22 [1749.0s]: train=[(performance degradation: 35.16623)]
+2024-08-24 11:11:01,158 |   INFO | perf Validation: [rec, pre, f1, auc]==[0.614630, 0.948015, 0.745759, 0.904976]
+2024-08-24 11:40:10,772 |  DEBUG | Epoch 23 [1749.6s]: train=[(performance degradation: 34.38770)]
+2024-08-24 11:43:13,254 |   INFO | perf Validation: [rec, pre, f1, auc]==[0.649074, 0.938672, 0.767462, 0.911102]
+2024-08-24 12:12:23,403 |  DEBUG | Epoch 24 [1750.1s]: train=[(performance degradation: 34.35974)]
+2024-08-24 12:15:26,415 |   INFO | perf Validation: [rec, pre, f1, auc]==[0.702222, 0.924427, 0.798148, 0.914701]
+2024-08-24 12:44:36,215 |  DEBUG | Epoch 25 [1749.8s]: train=[(performance degradation: 33.16751)]
+2024-08-24 12:47:38,922 |   INFO | perf Validation: [rec, pre, f1, auc]==[0.695926, 0.921756, 0.793078, 0.914525]
+2024-08-24 13:16:50,423 |  DEBUG | Epoch 26 [1751.5s]: train=[(performance degradation: 32.88252)]
+2024-08-24 13:19:53,186 |   INFO | perf Validation: [rec, pre, f1, auc]==[0.598333, 0.966786, 0.739190, 0.917613]
+2024-08-24 13:49:03,714 |  DEBUG | Epoch 27 [1750.5s]: train=[(performance degradation: 32.73871)]
+2024-08-24 13:52:06,208 |   INFO | perf Validation: [rec, pre, f1, auc]==[0.660556, 0.950946, 0.779587, 0.917615]
+2024-08-24 14:21:17,569 |  DEBUG | Epoch 28 [1751.4s]: train=[(performance degradation: 32.38017)]
+2024-08-24 14:24:20,666 |   INFO | perf Validation: [rec, pre, f1, auc]==[0.730185, 0.906645, 0.808903, 0.916231]
+2024-08-24 14:53:31,050 |  DEBUG | Epoch 29 [1750.4s]: train=[(performance degradation: 31.93939)]
+2024-08-24 14:56:33,923 |   INFO | perf Validation: [rec, pre, f1, auc]==[0.695926, 0.931813, 0.796777, 0.915177]
+2024-08-24 15:25:44,694 |  DEBUG | Epoch 30 [1750.8s]: train=[(performance degradation: 31.47150)]
+2024-08-24 15:28:48,254 |   INFO | perf Validation: [rec, pre, f1, auc]==[0.713148, 0.934482, 0.808949, 0.925328]
+2024-08-24 15:32:59,769 |   INFO | perf Test: [rec, pre, f1, auc]==[0.709867, 0.927203, 0.804108, 0.921634]

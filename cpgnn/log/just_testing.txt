@@ -1,0 +1,21 @@
+2024-08-21 17:13:14,953 |   INFO | Use GPU 0 and GPU 1 for training
+2024-08-21 17:13:15,588 |   INFO | Loading data from c4b_perf_encoding_with_cpg
+2024-08-21 17:13:17,578 |   INFO | Extracting statements
+2024-08-21 17:13:21,964 |   INFO | Extracting interactions
+2024-08-21 17:13:51,023 |  DEBUG | CPG statistics
+2024-08-21 17:13:51,023 |  DEBUG | [n_typetoken, n_entity, n_stat, n_relation] = [11855, 1553617, 444906, 8]
+2024-08-21 17:13:51,023 |  DEBUG | [n_triple, n_inter] = [3748222, 4006048]
+2024-08-21 17:13:51,023 |  DEBUG | [n_ast, n_cfg, n_pdg] = [3178105, 517023, 310920]
+2024-08-21 17:13:51,023 |  DEBUG | [max n_entity for a statement] = [2014]
+2024-08-21 17:13:51,023 |   INFO | Parsing code perf degradation prediction dataset
+2024-08-21 17:13:51,023 |   INFO | Extract functions from c4b dataset
+2024-08-21 17:13:51,023 |  DEBUG | The total number of functions: 6879
+2024-08-21 17:13:51,884 |  DEBUG | Code Performance Degradation: [n_I, n_TN] = [30000, 30000]
+2024-08-21 17:13:51,884 |   INFO | Converting interactions into sparse adjacency matrix
+2024-08-21 17:13:52,316 |   INFO | Generating normalized sparse adjacency matrix
+2024-08-21 17:13:52,773 |   INFO | Generating code perf degradation prediction training, validation, and testing sets
+2024-08-21 17:13:52,773 |   INFO | Initing type/token embeddings with word2vec
+2024-08-21 17:14:03,893 |   INFO | code performance degradation prediction on type 0
+2024-08-21 17:14:03,908 |  DEBUG | Performance degradation (Type 0) [n_train, n_val, n_test] = [34200, 10800, 15000]
+2024-08-21 17:14:03,913 |   INFO | Initing SGL model
+2024-08-21 17:14:03,915 |   INFO | Finish building inputs for SGL
