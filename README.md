@@ -56,7 +56,7 @@ Please download them and unzip them in the corresponding paths.
   - `code4bench`: Folder containing the Unseen split before CPG.
 
 - **`cpgnn/data.txt`:**
-  - Contains the CPG dict for each different split (input for the model).
+  - Contains the CPG dict for each different split method (input for the model).
   - `c4b_perf_encoding_within`: The Within split.
   - `c4b_perf_encoding_unseen`: The Unseen split.
   - `c4b_perf_encoding_within_without_cfg_dfg`: The AST split.
