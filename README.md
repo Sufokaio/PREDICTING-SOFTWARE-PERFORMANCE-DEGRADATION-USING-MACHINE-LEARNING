@@ -7,3 +7,6 @@ We do not claim that Tailor is our work, in fact we only made a couple of modifi
 
 This package also uses data from the Code4Bench dataset: https://github.com/code4bench/Code4Bench 
 The Java submissions used and the scripts that prepare the data are in this package. TODO: which files and where
+
+Results in cpgnn/log
+
