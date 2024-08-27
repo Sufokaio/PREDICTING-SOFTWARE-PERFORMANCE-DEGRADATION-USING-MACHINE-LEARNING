@@ -1,5 +1,8 @@
 # PREDICTING-SOFTWARE-PERFORMANCE-DEGRADATION-USING-MACHINE-LEARNING
 
+El Hihi Taha 0567414 Taha.El.Hihi@vub.be
+
+
 This package uses the Tailor framework: https://github.com/jun-zeng/Tailor/tree/main
 
 Some functions have been renamed to avoid context confusion (e.g. code clone -> performance degradation).
